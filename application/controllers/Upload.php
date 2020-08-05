@@ -47,8 +47,8 @@ class Upload extends CI_Controller
         $author = $this->input->post('author');
 
         $data = array(
-                        'author' => $author,
-                );
+            'author' => $author,
+        );
 
         if (!empty($_FILES['image']['name'])) {
             $image = $this->_do_upload();
@@ -71,10 +71,10 @@ class Upload extends CI_Controller
 
         $config['upload_path'] 		= 'assets/upload/images/';
         $config['allowed_types'] 	= 'gif|jpg|png';
-        $config['max_size'] 			= 100;
-        $config['max_widht'] 			= 1000;
+        $config['max_size'] 		= 100;
+        $config['max_widht'] 		= 1000;
         $config['max_height']  		= 1000;
-        $config['file_name'] 			= $image_name;
+        $config['file_name'] 		= $image_name;
 
         $this->load->library('upload', $config);
         if (!$this->upload->do_upload('image')) {

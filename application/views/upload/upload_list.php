@@ -30,6 +30,7 @@
     <h3>List Data</h3>
   </div>
   <div class="content">
+    <p><?=$this->session->flashdata('msg') ?></p>
     <?php echo anchor('upload/add/','Create'); ?>
     <table>
       <tr>
